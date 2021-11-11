@@ -1,3 +1,8 @@
+This is my 10`s web project. It was made with Create-React-App, css and JS.
+link to github: https://stasmnuskin.github.io/around-react/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
