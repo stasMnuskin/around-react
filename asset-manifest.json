@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/%7Baround-react%7D/static/css/main.61aa9d96.chunk.css",
+    "main.js": "/%7Baround-react%7D/static/js/main.d9bf608f.chunk.js",
+    "main.js.map": "/%7Baround-react%7D/static/js/main.d9bf608f.chunk.js.map",
+    "runtime-main.js": "/%7Baround-react%7D/static/js/runtime-main.4c8a6410.js",
+    "runtime-main.js.map": "/%7Baround-react%7D/static/js/runtime-main.4c8a6410.js.map",
+    "static/js/2.378640ba.chunk.js": "/%7Baround-react%7D/static/js/2.378640ba.chunk.js",
+    "static/js/2.378640ba.chunk.js.map": "/%7Baround-react%7D/static/js/2.378640ba.chunk.js.map",
+    "static/js/3.98d75b2e.chunk.js": "/%7Baround-react%7D/static/js/3.98d75b2e.chunk.js",
+    "static/js/3.98d75b2e.chunk.js.map": "/%7Baround-react%7D/static/js/3.98d75b2e.chunk.js.map",
+    "index.html": "/%7Baround-react%7D/index.html",
+    "static/css/main.61aa9d96.chunk.css.map": "/%7Baround-react%7D/static/css/main.61aa9d96.chunk.css.map",
+    "static/js/2.378640ba.chunk.js.LICENSE.txt": "/%7Baround-react%7D/static/js/2.378640ba.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/%7Baround-react%7D/static/media/white-heart.3826c074.svg",
+    "static/media/heade-logo.4e8e0a1d.svg": "/%7Baround-react%7D/static/media/heade-logo.4e8e0a1d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c8a6410.js",
+    "static/js/2.378640ba.chunk.js",
+    "static/css/main.61aa9d96.chunk.css",
+    "static/js/main.d9bf608f.chunk.js"
+  ]
+}
