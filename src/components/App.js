@@ -95,8 +95,8 @@ function App() {
           avatar: result.avatar,
           _id: result._id,
         });
-        closeAllPopups();
       })
+      .then(closeAllPopups())
       .catch(console.log);
   }
 
@@ -105,8 +105,8 @@ function App() {
       .createCard(card)
       .then((newCard) => {
         setCards([newCard, ...cards]);
-        closeAllPopups();
       })
+      .then(closeAllPopups())
       .catch(console.log);
   }
   function handleEditAvatarClick() {
