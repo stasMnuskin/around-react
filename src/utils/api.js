@@ -7,7 +7,7 @@ const customFetch = (url, headers) => {
   });
 };
 
-class apiClass {
+class Api {
   constructor(baseUrl, headers) {
     this._baseUrl = baseUrl;
     this._headers = headers;
@@ -70,7 +70,7 @@ class apiClass {
   }
 }
 
- const api = new apiClass("https://around.nomoreparties.co/v1/group-12", {
+ const api = new Api("https://around.nomoreparties.co/v1/group-12", {
   authorization: "58a0c9dd-0104-421e-8188-69fa2ff9ad79",
   "Content-Type": "application/json",
 });
