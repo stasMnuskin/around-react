@@ -25,17 +25,25 @@ function App() {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
 
     // Send a request to the API and getting the updated card data
-    api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
-      setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-    });
+    api
+      .changeLikeCardStatus(card._id, !isLiked)
+      .then((newCard) => {
+        setCards((state) =>
+          state.map((c) => (c._id === card._id ? newCard : c))
+        );
+      })
+      .catch(console.log);
     // console.log("like");
   }
 
   function handleCardDelete(card) {
     // console.log("card = ", card);
-    api.deleteCard(card._id).then((result) => {
-      setCards(cards.filter((filteredCard) => filteredCard._id !== card._id));
-    });
+    api
+      .deleteCard(card._id)
+      .then((result) => {
+        setCards(cards.filter((filteredCard) => filteredCard._id !== card._id));
+      })
+      .catch(console.log);
   }
 
   const [currentUser, setCurrentUser] = React.useState({
@@ -50,12 +58,12 @@ function App() {
       .getUserInfo()
       .then((result) => {
         // console.log("result = " ,result);
-        setCurrentUser({
-          name: result.name,
-          about: result.about,
-          avatar: result.avatar,
-          _id: result._id,
-        });
+        setCurrentUser(result);
+
+        // name: result.name,
+        // about: result.about,
+        // avatar: result.avatar,
+        // _id: result._id,
       })
       .catch(console.log);
   }, []);
@@ -119,16 +127,19 @@ function App() {
 
   function handleUpdateUser(user) {
     // console.log("user = ", user);
-    api.updateProfile(user).then((result) => {
-      // console.log("result = ", result);
-      setCurrentUser({
-        name: result.name,
-        about: result.about,
-        avatar: result.avatar,
-        _id: result._id,
-      });
-    });
-    closeAllPopups();
+    api
+      .updateProfile(user)
+      .then((result) => {
+        // console.log("result = ", result);
+        setCurrentUser({
+          name: result.name,
+          about: result.about,
+          avatar: result.avatar,
+          _id: result._id,
+        });
+      })
+      .then(closeAllPopups())
+      .catch(console.log);
   }
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
@@ -164,7 +175,7 @@ function App() {
               title="Are You Sure?"
               buttonText="Yes"
             >
-              <input
+              {/* <input
                 id="avatar-input"
                 name="link"
                 type="url"
@@ -175,7 +186,7 @@ function App() {
               <span
                 id="avatar-input-error"
                 className="modal__input-error"
-              ></span>
+              ></span> */}
             </PopupWithForm>
             <ImagePopup
               card={selectedCard}

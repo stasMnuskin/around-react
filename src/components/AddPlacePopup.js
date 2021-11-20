@@ -5,6 +5,11 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
   const [placeTitle, setPlaceTitle] = React.useState("");
   const [placeLink, setPlaceLink] = React.useState("");
 
+  React.useEffect(() => {
+    setPlaceTitle("");
+    setPlaceLink("");
+  }, [isOpen]);
+
   function titleChange(evt) {
     evt.preventDefault();
     setPlaceTitle(evt.target.value);

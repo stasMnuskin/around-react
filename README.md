@@ -1,4 +1,4 @@
-This is my 10`s web project. It was made with Create-React-App, css and JS.
+This is my 11`s web project. It was made with Create-React-App, css and JS.
 link to github: https://stasmnuskin.github.io/around-react/
 
 
