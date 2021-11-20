@@ -70,7 +70,9 @@ class apiClass {
   }
 }
 
-export const api = new apiClass("https://around.nomoreparties.co/v1/group-12", {
+ const api = new apiClass("https://around.nomoreparties.co/v1/group-12", {
   authorization: "58a0c9dd-0104-421e-8188-69fa2ff9ad79",
   "Content-Type": "application/json",
 });
+
+export default api;
