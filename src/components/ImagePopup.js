@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function ImagePopup(props) {
   // console.log('imagepopup props.card.link = ', props.card.link);
   return (

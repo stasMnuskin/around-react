@@ -33,7 +33,7 @@ class Api {
     return customFetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({ name: data.input_name, about: data.input_job }),
+      body: JSON.stringify({ name: data.name, about: data.about }),
     });
   }
   deleteCard(cardId) {
@@ -54,11 +54,18 @@ class Api {
       headers: this._headers,
     });
   }
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return this.likeCard(cardId);
+    } else {
+      return this.deleteLike(cardId);
+    }
+  }
   changeAvatar(avatar) {
     return customFetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({ avatar: avatar.link }),
+      body: JSON.stringify({ avatar: avatar.avatar }),
     });
   }
 }

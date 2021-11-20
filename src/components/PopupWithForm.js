@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function PopupWithForm(props) {
   return (
     <div className={`modal modal_type_${props.name} ${props.isOpen ? 'modal_open':''}`}>
@@ -7,7 +9,7 @@ export default function PopupWithForm(props) {
           type="button"
           className="modal__close-button"
         ></button>
-        <form name={props.name} action="#" className="modal__form">
+        <form onSubmit={props.onSubmit} name={props.name} action="#" className="modal__form">
           <h2 className="modal__title">{props.title}</h2>
           {props.children}
           <button type="submit" className="modal__form-button">
