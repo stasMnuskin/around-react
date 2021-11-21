@@ -96,7 +96,7 @@ function App() {
           _id: result._id,
         });
       })
-      .then(closeAllPopups())
+      .then(closeAllPopups)
       .catch(console.log);
   }
 
@@ -106,7 +106,7 @@ function App() {
       .then((newCard) => {
         setCards([newCard, ...cards]);
       })
-      .then(closeAllPopups())
+      .then(closeAllPopups)
       .catch(console.log);
   }
   function handleEditAvatarClick() {
@@ -138,7 +138,7 @@ function App() {
           _id: result._id,
         });
       })
-      .then(closeAllPopups())
+      .then(closeAllPopups)
       .catch(console.log);
   }
   function closeAllPopups() {
